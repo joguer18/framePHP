@@ -1,0 +1,101 @@
+<!--PAGE CONTENT -->
+<div id="content">
+
+	<div class="inner">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Edicion de clientes</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-6">
+								<form role="form"
+									action="<?php echo BASE_URL ?>customer/grabarcustomer"
+									method='post'>
+									<div class="form-group">
+										<label>customerNumber</label> <input type='text'
+											name=customerNumber
+											value="<?php echo $this->customer->customerNumber ?>"
+											class="form-control" readonly>
+
+									</div>
+									<div class="form-group">
+										<label>customerName</label> <input type='text'
+											name='customerName' class="form-control"
+											value="<?php echo $this->customer->customerName ?>">
+									</div>
+
+									<div class="form-group">
+										<label>contactLastName</label> <input type='text'
+											name='contactLastName' class="form-control"
+											value="<?php echo $this->customer->contactLastName ?>">
+									</div>
+									<div class="form-group">
+										<label>contactFirstName</label> <input type='text'
+											name='contactFirstName' class="form-control"
+											value="<?php echo $this->customer->contactFirstName ?>">
+									</div>
+									<div class="form-group">
+										<label>phone</label> <input type='text'
+											name='phone' class="form-control"
+											value="<?php echo $this->customer->phone ?>">
+									</div>
+									<div class="form-group">
+										<label>addressLine1</label> <input type='text'
+											name='addressLine1' class="form-control"
+											value="<?php echo $this->customer->addressLine1 ?>">
+									</div>
+									<div class="form-group">
+										<label>addressLine2</label> <input type='text'
+											name='addressLine2' class="form-control"
+											value="<?php echo $this->customer->addressLine2 ?>">
+									</div>
+									<div class="form-group">
+										<label>city</label> <input type='text'
+											name='city' class="form-control"
+											value="<?php echo $this->customer->city ?>">
+									</div>
+									<div class="form-group">
+										<label>state</label>
+										<textarea class="form-control" name='state' rows="3"><?php echo $this->customer->state ?></textarea>
+									</div>
+									<div class="form-group">
+										<label>postalCode</label> <input type='text'
+											name='postalCode' class="form-control"
+											value="<?php echo $this->customer->postalCode ?>">
+									</div>
+									<div class="form-group">
+										<label>country</label> <input type='text' name='country'
+											class="form-control"
+											value="<?php echo $this->customer->country ?>">
+									</div>
+									<div class="form-group">
+										<label>salesRepEmployeeNumber</label> <input type='text'
+											name='salesRepEmployeeNumber' class="form-control"
+											value="<?php echo $this->customer->salesRepEmployeeNumber ?>">
+									</div>
+									<div class="form-group">
+										<label>creditLimit</label> <input type='text' name='creditLimit'
+											class="form-control"
+											value="<?php echo $this->customer->creditLimit ?>">
+									</div>
+									
+									<br>
+									<button type="submit" class="btn btn-default">Submit Button</button>
+									<button type="reset" class="btn btn-default">Reset Button</button>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

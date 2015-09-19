@@ -1,0 +1,76 @@
+<!--PAGE CONTENT -->
+<div id="content">
+
+	<div class="inner">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Edicion de empleados</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-6">
+								<form role="form"
+									action="<?php echo BASE_URL ?>employee/grabaremployee"
+									method='post'>
+									<div class="form-group">
+										<label>Num Empleado</label> <input type='text'
+											name=employeeNumber
+											value="<?php echo $this->employee->employeeNumber ?>"
+											class="form-control" readonly>
+
+									</div>
+									<div class="form-group">
+										<label>Nombre</label> <input type='text'
+											name='firstName' class="form-control"
+											value="<?php echo $this->employee->firstName ?>">
+									</div>
+
+									<div class="form-group">
+										<label>Apellido</label> <input type='text'
+											name='lastName' class="form-control"
+											value="<?php echo $this->employee->lastName ?>">
+									</div>
+									<div class="form-group">
+										<label>Extensión</label> <input type='text'
+											name='extension' class="form-control"
+											value="<?php echo $this->employee->extension ?>">
+									</div>
+									<div class="form-group">
+										<label>Email</label> <input type='text'
+											name='email' class="form-control"
+											value="<?php echo $this->employee->email ?>">
+									</div>
+									<div class="form-group">
+										<label>Código Oficina</label>
+										<textarea class="form-control" name='officeCode' rows="3"><?php echo $this->employee->officeCode ?></textarea>
+									</div>
+									<div class="form-group">
+										<label>Reporta a</label> <input type='text'
+											name='reportsTo' class="form-control"
+											value="<?php echo $this->employee->reportsTo ?>">
+									</div>
+									<div class="form-group">
+										<label>Trabajo</label> <input type='text' name='jobTitle'
+											class="form-control"
+											value="<?php echo $this->employee->jobTitle ?>">
+									</div>
+									
+									<br>
+									<button type="submit" class="btn btn-default">Submit Button</button>
+									<button type="reset" class="btn btn-default">Reset Button</button>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,84 @@
+
+<!--PAGE CONTENT -->
+<div id="content">
+
+	<div class="inner">
+		<div class="row">
+			<div class="col-lg-16">
+
+
+				<h2>Tabla empleados</h2>
+
+
+
+			</div>
+		</div>
+
+		<hr />
+
+
+		<div class="row">
+			<div class="col-lg-16">
+				<div class="panel panel-default">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered table-hover"
+								id="example">
+								<thead>
+									<tr>
+										<th>Num Empleado</th>
+										<th>Nombre</th>
+										<th>Apellido</th>
+										<th>Extensión</th>
+										<th>Email</th>
+										<th>Código Oficina</th>
+										<th>Reporta a</th>
+										<th>Trabajo</th>
+										<th>Opciones</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+                                    <?php while($reg = $this->employees->fetch_object()):?>
+                                        <tr class="odd gradeX">
+										<td><?php echo $reg->employeeNumber ?></td>
+										<td><?php echo $reg->firstName ?></td>
+										<td><?php echo $reg->lastName ?></td>
+										<td><?php echo $reg->extension ?></td>
+										<td class="center"><?php echo $reg->email ?></td>
+										<td><?php echo $reg->officeCode ?></td>
+										<td class="center"><?php echo $reg->reportsTo?></td>
+										<td><?php echo $reg->jobTitle ?></td>
+										<td><a href="<?php echo BASE_URL?>employee/editar/<?php echo $reg->employeeNumber?>">Editar</a> </td>
+										<td><a href="<?php echo BASE_URL?>employee/borrar/<?php echo $reg->employeeNumber?>">Borrar</a></td>
+									</tr>
+                                    <?php endwhile;?>    
+                                   
+                                   </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
