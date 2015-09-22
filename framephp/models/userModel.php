@@ -53,6 +53,54 @@ Class userModel extends Model{
 		return;
 	}
 	
+	//Métodos para el CRUD de la tarea
+	
+	public function getAllUser() {
+		$sql = "SELECT idUser, firstName, lastName, email, dateReg, dateMod FROM Users
+				where active = 1
+				";
+		// Para el borrado lógico:
+		// where active = 1
+		$result = $this->_db->query ( $sql );
+	
+		return $result;
+	}
+	
+	public function getUser($userCode) {
+		$sql = "select * from Users where idUser='$userCode'";
+		$result = $this->_db->query ( $sql );
+		if ($result->num_rows) {
+			$reg = $result->fetch_object ();
+		}
+		else
+			$reg=null;
+	
+		return $reg;
+	}
+	
+	public function updateUser($idUser,$firstName,$lastName,$email,$dateReg,$dateMod){
+	
+		$sql = "update Users set
+	
+		firstName = '$firstName',
+		lastName = '$lastName',
+		email = '$email',
+		dateReg = '$dateReg',
+		dateMod = '$dateMod'
+		where idUser = '$idUser'";
+		$this->_db->query($sql) or die('Error:'.$sql);
+	
+	}
+	
+	//Borrado lógico
+	public function delUser($userNumber){
+	
+		$sql = "update Users set active = 0 where idUser='$userNumber'";
+		$this->_db->query($sql) or die('Error: '. $sql);
+		return;
+	
+	}
+	
 	
 }
 

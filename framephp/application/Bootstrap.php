@@ -36,7 +36,7 @@ class Bootstrap
             }
             
         } else {
-            throw new Exception('no encontrado');
+            throw new Exception('controlador no encontrado');
         }
     }
 }

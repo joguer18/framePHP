@@ -370,6 +370,41 @@
                        
                     </a>                   
                 </li>
+                <li class="panel">
+                    <a href="<?php echo BASE_URL?>office/index" >
+                        <i class="icon-table"></i> Offices
+       
+                       
+                    </a>                   
+                </li>
+                <li class="panel">
+                    <a href="<?php echo BASE_URL?>order/index" >
+                        <i class="icon-table"></i> Order
+       
+                       
+                    </a>                   
+                </li>
+                <li class="panel">
+                    <a href="<?php echo BASE_URL?>orderdetail/index" >
+                        <i class="icon-table"></i> OrderDetails
+       
+                       
+                    </a>                   
+                </li>
+                <li class="panel">
+                    <a href="<?php echo BASE_URL?>payment/index" >
+                        <i class="icon-table"></i> Payments
+       
+                       
+                    </a>                   
+                </li>
+                <li class="panel">
+                    <a href="<?php echo BASE_URL?>user/index" >
+                        <i class="icon-table"></i> Users
+       
+                       
+                    </a>                   
+                </li>
 
 <!--  Comentando los ítems del menú lateral izquierdo
                 <li class="panel ">
