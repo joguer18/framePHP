@@ -41,6 +41,25 @@ class productModel extends Model {
 		
 	}
 	
+	//Creando un nuevo producto en base de datos
+	public function insertProducto($productCode,$productName,$productLine,$productScale,$productVendor,$productDescription,$quantityInStock,$buyPrice,$MSRP){
+		$sql=" insert into Products set
+		productCode='$productCode',
+		productName='$productName',
+		productLine='$productLine',
+		productScale ='$productScale',
+		productVendor ='$productVendor',
+		productDescription ='$productDescription',
+		quantityInStock ='$quantityInStock',
+		buyPrice ='$buyPrice',
+		MSRP ='$MSRP'
+			
+		";
+	
+		$this->_db->query($sql) or die('Error:'. $sql);
+				return;
+	}
+	
 	//Borrado lógico
 	public function delProducto($productCode){
 	

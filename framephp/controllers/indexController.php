@@ -13,7 +13,6 @@ class indexController extends Controller{
 	
 	public function addusuario(){
 		
-		
 		// limpieza de data que viene del formulario
 		$idUser = trim(strtolower($_POST['idUser']));
 		$firstName = trim(strtolower($_POST['firstName']));

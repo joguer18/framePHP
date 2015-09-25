@@ -5,13 +5,10 @@
 	<div class="inner">
 		<div class="row">
 			<div class="col-lg-16">
-
-
 				<h2>Tabla productos</h2>
-
-
-
+					
 			</div>
+			<div style="float: right;margin-right: 20px;"><a class="icon-plus" href="<?php echo BASE_URL?>product/nuevo">Agregar</a></div>
 		</div>
 
 		<hr />
@@ -44,7 +41,7 @@
 										<td><?php echo $reg->productLine ?></td>
 										<td class="center"><?php echo $reg->buyPrice ?></td>
 										<td class="center"><?php echo $reg->quantityInStock?></td>
-										<td><a href="<?php echo BASE_URL?>product/editar/<?php echo $reg->productCode?>">Editar</a> |</td>
+										<td ><a href="<?php echo BASE_URL?>product/editar/<?php echo $reg->productCode?>">Editar</a> |</td>
 										<td><a href="<?php echo BASE_URL?>product/borrar/<?php echo $reg->productCode?>">Borrar</a></td>
 									</tr>
                                     <?php endwhile;?>    
